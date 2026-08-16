@@ -27,7 +27,15 @@
 
     <section class="section" style="padding-top: 1rem;">
       <div class="container">
-        <div class="projects-grid" id="projects-grid"></div>
+        <div class="filter-bar" id="project-filters" role="toolbar" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="fintech">Fintech</button>
+          <button type="button" class="filter-btn" data-filter="public">Public sector</button>
+          <button type="button" class="filter-btn" data-filter="enterprise">Enterprise</button>
+          <button type="button" class="filter-btn" data-filter="health">Health</button>
+        </div>
+        <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+        <p class="filter-empty" id="projects-empty" hidden>No projects match this category yet.</p>
       </div>
     </section>
   </main>

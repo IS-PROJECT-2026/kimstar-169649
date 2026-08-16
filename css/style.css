@@ -632,3 +632,45 @@ body.nav-open {
   margin-top: 1rem !important;
   color: var(--ink) !important;
 }
+
+/* Filters */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
+}
+
+.filter-btn {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  min-height: 40px;
+  padding: 0.45rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.filter-btn:hover,
+.filter-btn.is-active {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+
+.project-card.is-filtering {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.project-card.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+.filter-empty {
+  color: var(--ink-soft);
+}
