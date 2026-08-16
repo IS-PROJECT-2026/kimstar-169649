@@ -15,10 +15,50 @@
   <div id="site-header"></div>
   <main id="contact-main">
     <section class="page-hero">
-      <div class="container">
+      <div class="container reveal">
         <p class="eyebrow">Get in touch</p>
-        <h1>Contact</h1>
-        <p class="lede">Validated enquiry forms and contact workflows arrive in the next development phase.</p>
+        <h1>Tell us what you need to ship next.</h1>
+        <p class="lede">Share a short brief. We will respond with a clear engagement path within two business days.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container contact-layout">
+        <form class="panel contact-form" id="contact-form" novalidate>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <p class="field-error" id="name-error" hidden></p>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <p class="field-error" id="email-error" hidden></p>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required>
+            <p class="field-error" id="subject-error" hidden></p>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <p class="field-error" id="message-error" hidden></p>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-success" id="form-success" hidden tabindex="-1" role="status">Thanks — your message looks good. We will follow up shortly.</p>
+        </form>
+
+        <aside class="panel reveal">
+          <p class="eyebrow">Direct</p>
+          <h2>Prefer email?</h2>
+          <p class="section-intro">Reach the delivery desk at hello@kimstar.example or use the form for a structured brief.</p>
+          <ul class="list-check">
+            <li>Name, email, subject, and message are validated in-browser</li>
+            <li>No backend submission in this static assignment build</li>
+            <li>Typical response window: two business days</li>
+          </ul>
+        </aside>
       </div>
     </section>
   </main>
