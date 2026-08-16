@@ -123,10 +123,8 @@ Related PRs:
 #### Step 3: Resolution & Clean Merge
 *Screenshot of your clean Git history or completed PR showing the conflict was resolved and merged.*
 
-Resolution commit: https://github.com/IS-PROJECT-2026/kimstar-169649/commit/c9d6e36e0f8f1c0b4b3a2e9d7c6a5b4a3c2d1e0f  
+Resolution commit: https://github.com/IS-PROJECT-2026/kimstar-169649/commit/c9d6e36d14acccb76aa7110165336e50da7e6693  
 Merged PR: https://github.com/IS-PROJECT-2026/kimstar-169649/pull/33
-
-*(If the exact short SHA redirect fails, use the PR link above and the commit titled `fix(home): resolve hero heading conflict`.)*
 
 * **Caption:** Conflict markers were removed, the chosen heading was kept, and the resolved branch was merged to main through PR #33.
 
