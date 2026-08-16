@@ -1,18 +1,36 @@
 ﻿Conflict 3: Rename / modify conflict
 =================================
-Git status:
-On branch conflict/3b-modify-css
-Your branch is ahead of 'origin/conflict/3b-modify-css' by 3 commits.
-  (use "git push" to publish your local commits)
+Command: git merge -X no-renames origin/main
 
-nothing to commit, working tree clean
+git merge -X no-renames origin/main
+On branch conflict/3d-modify-js
+Your branch is behind 'origin/conflict/3d-modify-js' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+	modified:   about.html
+	modified:   contact.html
+	modified:   index.html
+	new file:   js/site.js
+	modified:   projects.html
+	modified:   services.html
+
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+	deleted by them: js/main.js
 
 
-Unmerged index entries (git ls-files -u):
+
+git ls-files -u:
+100644 358a097646ca6efbd93d6346c86e9701dbeeece6 1	js/main.js
+100644 01df9e4801f1201ceda6b1583f02e0bdc8211d46 2	js/main.js
 
 
-Explanation:
-Branch A renamed css/style.css -> css/main.css and updated HTML links.
-Branch B modified css/style.css at the original path.
-Git reports a modify/delete or rename/modify conflict because one side
-renamed the file while the other changed its contents.
+Cause:
+- One branch renamed js/main.js -> js/site.js and updated HTML script tags
+- The other branch modified js/main.js at the original path
+- With rename detection disabled (-X no-renames), Git reports a modify/delete conflict
