@@ -14,6 +14,13 @@
     return match ? match.id : "home";
   }
 
+  function setMenuOpen(toggle, nav, open) {
+    nav.classList.toggle("is-open", open);
+    toggle.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("nav-open", open);
+  }
+
   function renderHeader() {
     const host = document.getElementById("site-header");
     if (!host) return;
@@ -33,31 +40,60 @@
             <span class="brand-mark">KS</span>
             <span class="brand-text">KIMSTAR</span>
           </a>
-          <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+          <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
           </button>
           <ul class="nav-links" id="primary-nav">${links}</ul>
         </div>
+        <div class="nav-backdrop" id="nav-backdrop" hidden></div>
       </header>
     `;
 
     const toggle = document.getElementById("nav-toggle");
     const nav = document.getElementById("primary-nav");
     const header = document.getElementById("top-nav");
+    const backdrop = document.getElementById("nav-backdrop");
 
     if (toggle && nav) {
+      const closeMenu = () => {
+        setMenuOpen(toggle, nav, false);
+        toggle.setAttribute("aria-label", "Open menu");
+        if (backdrop) backdrop.hidden = true;
+      };
+
+      const openMenu = () => {
+        setMenuOpen(toggle, nav, true);
+        toggle.setAttribute("aria-label", "Close menu");
+        if (backdrop) backdrop.hidden = false;
+      };
+
       toggle.addEventListener("click", () => {
-        const open = nav.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", String(open));
+        const willOpen = !nav.classList.contains("is-open");
+        if (willOpen) openMenu();
+        else closeMenu();
       });
 
+      if (backdrop) {
+        backdrop.addEventListener("click", closeMenu);
+      }
+
       nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          nav.classList.remove("is-open");
-          toggle.setAttribute("aria-expanded", "false");
-        });
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && nav.classList.contains("is-open")) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 960 && nav.classList.contains("is-open")) {
+          closeMenu();
+        }
       });
     }
 
