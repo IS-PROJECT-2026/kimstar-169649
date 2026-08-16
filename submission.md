@@ -24,7 +24,7 @@
 
 Paste the URL of the commit in your history that you think best demonstrates clean conventional commit practice (good type tag, clear subject, meaningful body or footer).
 
-- **Commit URL:** https://github.com/IS-PROJECT-2026/kimstar-169649/commit/93c75aa1dd8c9559029aa48def50c7bcbcc826ff
+- **Commit URL:** https://github.com/IS-PROJECT-2026/kimstar-169649/commit/1f532f4d56163526662bfa7f39af87981c904a8a
 - **Why this one?** It uses a clear `feat(contact)` type/scope, an imperative subject under 50 characters, and a body that explains the validation behaviour while tracing the work to issue `#11`.
 
 ### B. A Mistake or Struggle
@@ -59,34 +59,38 @@ Demonstrate your workflow mechanics by embedding your screenshots below.
 ### A. Milestones and Issues
 *Provide a screenshot showing your active milestone(s) and the granular tracking issues linked directly to them.*
 
-<!-- MANUAL: Paste milestone/issues screenshot here on GitHub.com -->
+![Milestones](evidence/screenshot_milestones.png)
+
 Reference page: https://github.com/IS-PROJECT-2026/kimstar-169649/milestones
 
-* **Caption:** Three milestones (Foundation & UI, Functionality & Interactions, Deployment & Quality) each contain granular issues created before coding those tasks.
+* **Caption:** Three closed milestones (Foundation & UI, Functionality & Interactions, Deployment & Quality), each 100% complete with 6/6 issues closed.
 
 ### B. Project Board
 *Provide a screenshot of your GitHub Project Board with your issues organized dynamically across columns (To Do, In Progress, Done).*
 
-<!-- MANUAL: Paste project board screenshot here on GitHub.com -->
+![Project board](evidence/screenshot_board.png)
+
 Reference page: https://github.com/orgs/IS-PROJECT-2026/projects/180
 
-* **Caption:** The KIMSTAR Kanban board uses Todo / In Progress / Done and shows completed Day 1–2 work in Done with remaining Day 3 items progressing through the board.
+* **Caption:** The KIMSTAR Kanban board tracks all 18 issues assigned to AustinKimathi; every issue is in Done with linked pull requests where applicable.
 
 ### C. Branching Architecture
 *Provide a screenshot showing your local or remote Git branch list, highlighting your use of conventional, issue-linked naming patterns (e.g., `feat/`, `fix/`, `style/`).*
 
-<!-- MANUAL: Paste branches screenshot here on GitHub.com -->
+![Branches](evidence/screenshot_branches.png)
+
 Reference page: https://github.com/IS-PROJECT-2026/kimstar-169649/branches
 
-* **Caption:** Feature branches followed `feat|fix|style/[issue]-[description]` naming and were merged through pull requests rather than direct pushes to main.
+* **Caption:** Protected default branch `main` with passing checks (3/3). Feature work used issue-linked branch names and was merged through pull requests rather than direct pushes to main.
 
 ### D. Pull Requests & Traceability
 *Provide a screenshot of a completed or open Pull Request (PR) on GitHub that clearly shows it is linked to a related development issue.*
 
-<!-- MANUAL: Paste PR screenshot here on GitHub.com -->
-Example PR with issue linkage: https://github.com/IS-PROJECT-2026/kimstar-169649/pull/26
+![Pull request](evidence/screenshot_pr.png)
 
-* **Caption:** PR #26 (`feat(nav): add mobile navigation`) closes issue #7 and documents the review/test plan before merge.
+Example PR with issue linkage: https://github.com/IS-PROJECT-2026/kimstar-169649/pull/29
+
+* **Caption:** Merged PR #29 (`feat(faq): add accordion interactions`) closes issue #10 and shows Development linkage in the sidebar.
 
 ---
 
@@ -123,7 +127,7 @@ Related PRs:
 #### Step 3: Resolution & Clean Merge
 *Screenshot of your clean Git history or completed PR showing the conflict was resolved and merged.*
 
-Resolution commit: https://github.com/IS-PROJECT-2026/kimstar-169649/commit/c9d6e36d14acccb76aa7110165336e50da7e6693  
+Resolution commit: https://github.com/IS-PROJECT-2026/kimstar-169649/commit/efa20e3b5d41d96af4252b4701f82773151a9d79  
 Merged PR: https://github.com/IS-PROJECT-2026/kimstar-169649/pull/33
 
 * **Caption:** Conflict markers were removed, the chosen heading was kept, and the resolved branch was merged to main through PR #33.
@@ -138,7 +142,7 @@ Merged PR: https://github.com/IS-PROJECT-2026/kimstar-169649/pull/33
 
 ![Conflict 2 markers](evidence/conflict_evidence_2.png)
 
-* **Caption:** Branches `conflict/2a-projects-js` and `conflict/2b-projects-js` collided in `projects.js`; resolved in https://github.com/IS-PROJECT-2026/kimstar-169649/pull/35 and commit `1442c08`.
+* **Caption:** Branches `conflict/2a-projects-js` and `conflict/2b-projects-js` collided in `projects.js`; resolved in https://github.com/IS-PROJECT-2026/kimstar-169649/pull/35 and commit `10acd84`.
 
 ---
 
@@ -150,7 +154,7 @@ Merged PR: https://github.com/IS-PROJECT-2026/kimstar-169649/pull/33
 
 ![Conflict 3 evidence](evidence/conflict_evidence_3.png)
 
-* **Caption:** Rename/modify conflict on `main.js` ↔ `site.js`, resolved by keeping `js/site.js` with the modify-side change via https://github.com/IS-PROJECT-2026/kimstar-169649/pull/39 and commit `e73ad11`.
+* **Caption:** Rename/modify conflict on `main.js` ↔ `site.js`, resolved by keeping `js/site.js` with the modify-side change via https://github.com/IS-PROJECT-2026/kimstar-169649/pull/39 and commit `1023f99`.
 
 ---
 
