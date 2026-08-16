@@ -59,7 +59,7 @@
 
   function cardMarkup(project) {
     return `
-      <article class="project-card reveal is-visible" data-category="${project.category}">
+      <article class="project-card is-filtering" data-category="${project.category}">
         <div class="project-card-media" style="background-image:url('${project.image}')"></div>
         <div class="project-card-body">
           <span class="tag">${labels[project.category] || project.category}</span>
@@ -70,11 +70,32 @@
       </article>`;
   }
 
-  function renderProjects() {
+  function renderProjects(filter) {
     const grid = document.getElementById("projects-grid");
+    const empty = document.getElementById("projects-empty");
     if (!grid) return;
-    grid.innerHTML = projects.map(cardMarkup).join("");
+
+    const visible = projects.filter((project) => filter === "all" || project.category === filter);
+    grid.innerHTML = visible.map(cardMarkup).join("");
+    requestAnimationFrame(() => {
+      grid.querySelectorAll(".project-card").forEach((card) => card.classList.add("is-shown"));
+    });
+    if (empty) empty.hidden = visible.length > 0;
   }
 
-  document.addEventListener("DOMContentLoaded", renderProjects);
+  function initFilters() {
+    const bar = document.getElementById("project-filters");
+    renderProjects("all");
+    if (!bar) return;
+
+    bar.addEventListener("click", (event) => {
+      const button = event.target.closest(".filter-btn");
+      if (!button) return;
+      bar.querySelectorAll(".filter-btn").forEach((btn) => btn.classList.remove("is-active"));
+      button.classList.add("is-active");
+      renderProjects(button.dataset.filter || "all");
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", initFilters);
 })();
