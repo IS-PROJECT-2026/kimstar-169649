@@ -674,3 +674,50 @@ body.nav-open {
 .filter-empty {
   color: var(--ink-soft);
 }
+
+/* FAQ accordion */
+.faq-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 1rem 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.faq-trigger span {
+  font-size: 1.25rem;
+  color: var(--teal);
+  transition: transform 0.25s var(--ease);
+}
+
+.faq-item.is-open .faq-trigger span {
+  transform: rotate(45deg);
+}
+
+.faq-panel {
+  padding: 0 1.1rem 1rem;
+  color: var(--ink-soft);
+}
+
+.faq-panel p {
+  margin: 0;
+}
