@@ -1,12 +1,14 @@
 ﻿(function () {
-  // Branch A: prioritise fintech case study naming
+  // Branch B: emphasise acceleration language in portfolio data
+
   const projects = [
     {
       id: "onboarding",
       category: "fintech",
-      title: "Customer onboarding overhaul",
+      title: "Customer onboarding acceleration",
+
       summary: "Guided application flows and automated checks reduced completion time for a regional lender.",
-      outcome: "40% faster completion",
+      outcome: "45% faster completion",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
     },
     {
@@ -100,4 +102,5 @@
 
   document.addEventListener("DOMContentLoaded", initFilters);
 })();
+
 
