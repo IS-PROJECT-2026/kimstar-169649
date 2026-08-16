@@ -585,3 +585,50 @@ body.nav-open {
   position: relative;
   z-index: 110;
 }
+
+/* Project portfolio cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.project-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(15, 118, 110, 0.4);
+}
+
+.project-card-media {
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card-body {
+  padding: 1.25rem 1.35rem 1.5rem;
+}
+
+.project-card-body .tag {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--teal-deep);
+  margin-bottom: 0.75rem;
+}
+
+.project-card-body p {
+  color: var(--ink-soft);
+  margin: 0.65rem 0 0;
+}
+
+.project-outcome {
+  margin-top: 1rem !important;
+  color: var(--ink) !important;
+}
