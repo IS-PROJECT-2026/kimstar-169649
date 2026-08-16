@@ -103,3 +103,9 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 960px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
