@@ -779,3 +779,7 @@ body.nav-open {
   color: var(--teal-deep);
   font-weight: 600;
 }
+
+/* Conflict 3 branch B: accent token for polish */
+:root { --accent-shift: #0d9488; }
+
