@@ -25,3 +25,7 @@
 
   document.addEventListener("DOMContentLoaded", initReveal);
 })();
+
+// Conflict 3 modify-side: expose reveal helper for debugging
+window.KIMSTAR_REVEAL_DEBUG = false;
+
