@@ -1,0 +1,18 @@
+﻿Conflict 3: Rename / modify conflict
+=================================
+Git status:
+On branch conflict/3b-modify-css
+Your branch is ahead of 'origin/conflict/3b-modify-css' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+Unmerged index entries (git ls-files -u):
+
+
+Explanation:
+Branch A renamed css/style.css -> css/main.css and updated HTML links.
+Branch B modified css/style.css at the original path.
+Git reports a modify/delete or rename/modify conflict because one side
+renamed the file while the other changed its contents.
