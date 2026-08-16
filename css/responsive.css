@@ -1,4 +1,4 @@
-﻿/* Responsive foundation */
+﻿/* Responsive foundation + mobile navigation */
 
 @media (max-width: 960px) {
   .grid-3,
@@ -16,21 +16,24 @@
   }
 
   .nav-links {
-    position: absolute;
-    top: calc(var(--header-h) + 0.4rem);
-    right: 1.25rem;
-    left: 1.25rem;
+    position: fixed;
+    top: calc(var(--header-h) + 0.55rem);
+    right: 1rem;
+    left: 1rem;
     flex-direction: column;
     align-items: stretch;
-    padding: 0.75rem;
-    border-radius: 16px;
+    padding: 0.85rem;
+    border-radius: 18px;
     border: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.97);
     box-shadow: var(--shadow);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-8px);
-    transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+    transform: translateY(-12px) scale(0.98);
+    transition: opacity 0.28s var(--ease), transform 0.28s var(--ease);
+    z-index: 105;
+    max-height: calc(100vh - var(--header-h) - 2rem);
+    overflow: auto;
   }
 
   .nav-links.is-open {
@@ -41,6 +44,11 @@
 
   .nav-links a {
     border-radius: 12px;
+    padding: 0.85rem 1rem;
+  }
+
+  .nav-backdrop:not([hidden]) {
+    display: block;
   }
 }
 
