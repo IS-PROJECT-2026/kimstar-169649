@@ -109,3 +109,88 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Responsive polish */
+@media (max-width: 1100px) {
+  .hero-metrics {
+    gap: 0.75rem;
+  }
+
+  .metric {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 960px) {
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .filter-bar {
+    gap: 0.5rem;
+  }
+
+  .faq-trigger {
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --header-h: 68px;
+  }
+
+  .page-hero h1,
+  .hero h1 {
+    letter-spacing: -0.03em;
+  }
+
+  .lede,
+  .section-intro {
+    font-size: 1rem;
+  }
+
+  .card,
+  .panel,
+  .project-card-body {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  .cta-band {
+    margin-bottom: 3.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .btn {
+    min-height: 46px;
+  }
+
+  .nav-links {
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-text {
+    letter-spacing: 0.04em;
+  }
+
+  .filter-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-metrics {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
